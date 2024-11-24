@@ -41,3 +41,15 @@ void SecondWindow::onSendButtonClicked()
         inputBox->clear(); // 清空输入框
     }
 }
+
+void SecondWindow::appendMessage(const QString &message){
+    chatBox->append("服务端: " + message);
+}
+
+void SecondWindow::keyPressEvent(QKeyEvent *event){
+    if(event->key() == Qt::Key_Enter || event->key() == Qt::Key_Return) {
+        onSendButtonClicked();
+    } else {
+        QWidget::keyPressEvent(event); // 调用基类处理其他按键事件
+    }
+}

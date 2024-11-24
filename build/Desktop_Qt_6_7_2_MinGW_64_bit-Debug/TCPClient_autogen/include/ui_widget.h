@@ -22,7 +22,7 @@ class Ui_Widget
 {
 public:
     QLineEdit *HostLineEdit;
-    QLineEdit *SocketLineEdit;
+    QLineEdit *PortLineEdit;
     QLabel *label;
     QLabel *label_2;
     QPushButton *connectButton;
@@ -37,9 +37,9 @@ public:
         HostLineEdit = new QLineEdit(Widget);
         HostLineEdit->setObjectName("HostLineEdit");
         HostLineEdit->setGeometry(QRect(320, 200, 171, 31));
-        SocketLineEdit = new QLineEdit(Widget);
-        SocketLineEdit->setObjectName("SocketLineEdit");
-        SocketLineEdit->setGeometry(QRect(320, 260, 171, 31));
+        PortLineEdit = new QLineEdit(Widget);
+        PortLineEdit->setObjectName("PortLineEdit");
+        PortLineEdit->setGeometry(QRect(320, 260, 171, 31));
         label = new QLabel(Widget);
         label->setObjectName("label");
         label->setGeometry(QRect(240, 210, 69, 19));

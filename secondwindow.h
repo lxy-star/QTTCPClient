@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QTextEdit>
 #include <QWidget>
+#include <QKeyEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -18,9 +19,9 @@ class SecondWindow : public QWidget
 public:
     explicit SecondWindow(QWidget *parent = nullptr);
     ~SecondWindow();
-    QTextEdit *chatBox;
-    QLineEdit *inputBox;
-    QPushButton *sendButton;
+    void appendMessage(const QString &message);
+    void keyPressEvent(QKeyEvent *event) override;
+
 signals:
     void sendMessageToServer(const QString &message);
 
@@ -28,6 +29,9 @@ private slots:
     void onSendButtonClicked();
 private:
     Ui::SecondWindow *ui;
+    QTextEdit *chatBox;
+    QLineEdit *inputBox;
+    QPushButton *sendButton;
 };
 
 #endif // SECONDWINDOW_H

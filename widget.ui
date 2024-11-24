@@ -23,7 +23,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="SocketLineEdit">
+  <widget class="QLineEdit" name="PortLineEdit">
    <property name="geometry">
     <rect>
      <x>320</x>

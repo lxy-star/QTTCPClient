@@ -26,7 +26,7 @@ private slots:
     void on_connectButton_clicked();
     void onSendMessageToServer(const QString &message);
     void readyRead();
-
+    void onServerDisconnected();
 private:
     Ui::Widget *ui;
     QTcpSocket *client_socket;
